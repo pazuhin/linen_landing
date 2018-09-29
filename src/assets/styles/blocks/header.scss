@@ -1,0 +1,121 @@
+.header {
+  min-height: 150px;
+  display: flex;
+
+  &__logo-pic {
+    @media screen and (max-width: 970px) {
+      width: 170px;
+    }
+  }
+
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn-link {
+    min-width: 255px;
+    padding: 15px 45px;
+    border-radius: 50px;
+    color: #c87066;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    display: inline-block;
+    border: 1px solid #ff8080;
+
+    &:hover {
+      background-color: #c87066;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 900px) {
+      border: 1px solid #ff8080;
+      border-radius: 50px;
+      color: #c87066;
+      display: inline-block;
+      min-width: 170px;
+      padding: 12px 29px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: .5s;
+      font-size: 12px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    margin-right: 50px;
+
+    @media screen and (max-width: 900px) {
+      margin-right: 25px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: 'ralewayregular', Arial, sans-serif;
+    color: #7d7d7d;
+    position: relative;
+
+    &:hover {
+      color: #c87066;
+      transition: 0.3s;
+    }
+
+    &:before {
+      border-bottom: 3px dotted #c87066;
+      content: "";
+      display: block;
+      height: 10px;
+      position: absolute;
+      width: 13px;
+      top: 15px;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    &:after {
+      border-bottom: 3px dotted #c87066;
+      content: "";
+      display: block;
+      height: 10px;
+      position: absolute;
+      width: 13px;
+      top: -15px;
+      right: 0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+
+    &:hover:before {
+      transition: 0.3s;
+      opacity: 1;
+    }
+
+    &:hover:after {
+      transition: 0.3s;
+      opacity: 1;
+    }
+  }
+}
+

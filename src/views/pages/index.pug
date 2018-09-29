@@ -1,0 +1,29 @@
+include ../common/_mixins
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        link(rel='stylesheet' href='main.min.css')
+
+
+    body
+        .wrapper
+           .maincontent
+               include header.pug
+               include catalog-list.pug
+               include banner.pug
+               include about.pug
+               include cooperation.pug
+               include contscts.pug
+               include footer.pug
+
+    block scripts
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='main.js')
+
+
+
+

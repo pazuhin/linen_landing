@@ -1,0 +1,128 @@
+.catalog-list {
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+}
+
+.catalog-list__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.catalog-btn {
+  font-family: 'ralewaymedium', Arial, sans-serif;
+  max-width: 255px;
+  padding: 15px 45px;
+  color: #817a71;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+  display: inline-block;
+  border: 1px solid #817a71;
+  text-align: center;
+  position: relative;
+
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    max-width: 200px;
+  }
+
+  &:hover {
+    color: #ff8080;
+    border: 1px solid #ff8080;
+  }
+
+  &:before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 55px;
+    position: absolute;
+    width: 10px;
+    top: -1px;
+    left: -11px;
+  }
+  &:after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 55px;
+    position: absolute;
+    width: 10px;
+    top: -1px;
+    right: -11px;
+  }
+
+}
+
+.catalog {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  max-width: 255px;
+  position: absolute;
+  top: 64px;
+
+  &__item {
+    background-color: #f8f8f8;
+  }
+
+  &__drop-link {
+    width: 255px;
+    padding: 15px 0 15px 20px;
+    display: block;
+    text-decoration: none;
+    font-family: 'ralewayregular', Arial, sans-serif;
+    font-size: 14px;
+    color: #817a71;
+
+    @media screen and (max-width: 900px) {
+      font-size: 12px;
+      max-width: 200px;
+    }
+
+    &:hover {
+      background-color: #c87066;
+      color: #fff;
+      transition: 0.3s;
+      padding: 15px 0 15px 30px;
+    }
+  }
+
+  &__item-list {
+    position: relative;
+
+
+    &:hover {
+      .catalog__drop {
+        opacity: 1;
+        top: 0;
+        width: 265px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 12px;
+          width: 210px;
+        }
+      }
+    }
+  }
+
+  &__drop {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    opacity: 0;
+    top: -9999px;
+    transition: 0.5s opacity;
+    border-left: 10px solid transparent;
+  }
+  
+  &__drop-item {
+    background-color: #f8f8f8;
+  }
+}
+
+.catalog--active {
+  height: auto;
+  overflow: visible;
+}
