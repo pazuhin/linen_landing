@@ -75,6 +75,10 @@
       margin-right: 15px;
     }
 
+    @media screen and (max-width: 420px) {
+      font-size: 12px;
+    }
+
     &:last-child {
       margin-right: 0;
     }

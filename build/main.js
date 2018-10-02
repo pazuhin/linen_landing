@@ -20,6 +20,27 @@ catalogLink.addEventListener('click', function(e) {
 });
 
 
+$(document).ready(function() {
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            $('.form-page').addClass('is-active');
+            $('.modal-overlay').removeClass('active');
+            $('.modal').removeClass('active');
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+
+});
 //Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
@@ -71,3 +92,43 @@ function init() {
         result.textContent = result.textContent + ' ' + i;
     }
 }
+var modalOverlay = document.querySelector(".modal-overlay");
+var modal = document.querySelector(".modal");
+var btn = document.querySelector(".header__btn-link");
+var closeBtn = document.querySelector(".close-modal");
+var footerBtn = document.querySelector(".footer__btn-link");
+var appLink = document.querySelector(".application-link");
+var formPage = document.querySelector(".form-page");
+var formBtn = document.querySelector(".form__btn-link");
+
+
+footerBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.classList.add('active');
+    modalOverlay.classList.add('active');
+});
+
+btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.classList.add('active');
+    modalOverlay.classList.add('active');
+});
+
+
+closeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.classList.remove('active');
+    modalOverlay.classList.remove('active');
+});
+
+modalOverlay.addEventListener('click', function(e){
+    if(e.target === modalOverlay){
+        modalOverlay.classList.remove('active');
+    }
+});
+
+appLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    formPage.classList.remove('is-active');
+});
+

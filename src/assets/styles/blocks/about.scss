@@ -36,6 +36,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 130px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__row {
@@ -50,6 +54,9 @@
 
     @media screen and (max-width: 768px) {
       margin-bottom: 40px;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
     }
 
     &:nth-child(2) {
@@ -60,8 +67,17 @@
       .about__text {
         margin-right: 0;
         margin-left: 20px;
+
+        @media screen and (max-width: 768px) {
+          margin-left: 0;
+        }
+
         .about-txt, .about-txt-down {
           text-align: left;
+
+          @media screen and (max-width: 768px) {
+            text-align: center;
+          }
         }
         .about-txt {
           margin-bottom: 35px;
@@ -78,6 +94,10 @@
 
         @media screen and (max-width: 900px) {
           margin-right: 65px;
+        }
+
+        @media screen and (max-width: 900px) {
+          margin-right: 0px;
         }
       }
     }
@@ -102,6 +122,8 @@
 
     @media screen and (max-width: 768px) {
       font-size: 14px;
+      order: 2;
+      margin-right: 0;
     }
   }
   
@@ -119,11 +141,19 @@
     @media screen and (max-width: 768px) {
       width: 150px;
       height: 150px;
+      margin-left: 0px;
     }
   }
   
   &__class {
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      order: 1;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
   }
 
   &__class-num {
@@ -141,6 +171,7 @@
 
     @media screen and (max-width: 768px) {
       font-size: 70px;
+      left: 30px;
     }
   }
 
@@ -158,6 +189,9 @@
 
     @media screen and (max-width: 768px) {
       font-size: 17px;
+      text-align: center;
+      width: 200px;
+      left: -11%;
     }
   }
 
@@ -175,6 +209,8 @@
 
     @media screen and (max-width: 768px) {
       font-size: 17px;
+      width: 200px;
+      left: -10%;
     }
   }
 
@@ -192,6 +228,8 @@
 
     @media screen and (max-width: 768px) {
       font-size: 17px;
+      width: 200px;
+      left: -10%;
     }
   }
 
@@ -234,19 +272,31 @@
     @media screen and (max-width: 900px) {
       right: 32%;
     }
+
+    @media screen and (max-width: 768px) {
+      right: 50%;
+    }
   }
 
   &__class-dress {
     position: absolute;
     top: -10%;
     right: 15%;
+
+    @media screen and (max-width: 768px) {
+      right: 0%;
+    }
   }
 
   &__class-vector {
     position: absolute;
     top: -10%;
     left: 15%;
- }
+
+    @media screen and (max-width: 768px) {
+      left: 34px;
+    }
+   }
 }
 
 .about-txt, .about-txt-down {
@@ -257,5 +307,6 @@
 
   @media screen and (max-width: 768px) {
     line-height: 1.65;
+    text-align: center;
   }
 }
