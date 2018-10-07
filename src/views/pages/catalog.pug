@@ -7,27 +7,19 @@ html(lang="ru")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         link(rel='stylesheet' href='main.min.css')
-        title Этностиль
+        title Каталог
 
 
     body
         .wrapper
-           .maincontent
-               include ../sections/header
-               include ../sections/catalog-list
-               include ../sections/banner
-               include ../sections/about
-               include ../sections/cooperation
-               include ../sections/contscts
-               include ../sections/footer
-           include ../sections/modal
-           include ../sections/form-page
+            .maincontent
+                include ../sections/header
+                include ../sections/breadcrumbs
+                include ../sections/catalog-container
+                include ../sections/footer
+
 
     block scripts
         script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
         script(src='main.js')
-
-
-
-
