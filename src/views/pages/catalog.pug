@@ -6,7 +6,13 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         meta(content="width=device-width, initial-scale=1" name="viewport")
+        link(rel='stylesheet' href="http://sachinchoolur.github.io/lightslider/src/css/lightslider.css")
+        link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/css/lightgallery.min.css")
         link(rel='stylesheet' href='main.min.css')
+
+
+
+
         title Каталог
 
 
@@ -17,9 +23,17 @@ html(lang="ru")
                 include ../sections/breadcrumbs
                 include ../sections/catalog-container
                 include ../sections/footer
+            include ../sections/modal
+            include ../sections/modal-img
 
 
     block scripts
-        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-        script(src='main.js')
+        script(src="http://sachinchoolur.github.io/lightslider/src/js/lightslider.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.19/js/lightgallery-all.min.js")
+        script(src='modal.js')
+        script(src='slider.js')
+        script(src='acco-catalog.js')
+        script(src='mail.js')
+        script(src='mobil-acco.js')
+        script(src='modal-img.js')

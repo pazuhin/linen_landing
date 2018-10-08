@@ -3,7 +3,6 @@ var modal = document.querySelector(".modal");
 var btn = document.querySelector(".header__btn-link");
 var closeBtn = document.querySelector(".close-modal");
 var footerBtn = document.querySelector(".footer__btn-link");
-var appLink = document.querySelector(".application-link");
 var formPage = document.querySelector(".form-page");
 var formBtn = document.querySelector(".form__btn-link");
 
@@ -30,11 +29,9 @@ closeBtn.addEventListener('click', function(e) {
 modalOverlay.addEventListener('click', function(e){
     if(e.target === modalOverlay){
         modalOverlay.classList.remove('active');
+        modal.classList.remove('active');
     }
 });
 
-appLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    formPage.classList.remove('is-active');
-});
+
 

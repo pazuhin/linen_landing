@@ -1,11 +1,11 @@
-const blockgAside = document.querySelector(".catalog-block__left");
-const catalogTrigger = document.querySelector(".catalog__trigger");
+var blockAside = document.querySelector(".catalog-block__left");
+var catalogTrigger = document.querySelector(".catalog__trigger");
 
 catalogTrigger.addEventListener("click", navOpen);
 
 function navOpen(e) {
     e.preventDefault();
-    blockgAside.classList.toggle("is-open");
+    blockAside.classList.toggle("is-open");
 }
 
 $('.catalog__trigger').on('click', function(e) {

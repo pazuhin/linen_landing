@@ -1,0 +1,1 @@
+$(document).ready(function(){$("form").submit(function(){var e=$(this);return $.ajax({type:"POST",url:"mail.php",data:e.serialize()}).done(function(){$(".form-page").addClass("is-active"),$(".modal-overlay").removeClass("active"),$(".modal").removeClass("active"),setTimeout(function(){e.trigger("reset")},1e3)}),!1})});

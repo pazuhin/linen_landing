@@ -34,7 +34,7 @@ gulp.task("clean", () => {
     return del(config.ROOT_PATH);
 });
 
-// собираем скрипты webpack
+// // собираем скрипты webpack
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 
@@ -48,13 +48,13 @@ gulp.task("scripts", function (cb) {
     );
 });
 
-var concat = require('gulp-concat');
-
-gulp.task('scripts', function() {
-    return gulp.src(`${config.SRC_DIR}/scripts/**`)
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(`${config.DIST_DIR}`));
-});
+// var concat = require('gulp-concat');
+//
+// gulp.task('scripts', function() {
+//     return gulp.src(`${config.SRC_DIR}/scripts/**`)
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest(`${config.DIST_DIR}`));
+// });
 
 //рендерим странички
 gulp.task("pug", () => {

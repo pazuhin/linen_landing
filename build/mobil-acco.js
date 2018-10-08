@@ -1,0 +1,1 @@
+var blockAside=document.querySelector(".catalog-block__left"),catalogTrigger=document.querySelector(".catalog__trigger");function navOpen(e){e.preventDefault(),blockAside.classList.toggle("is-open")}catalogTrigger.addEventListener("click",navOpen),$(".catalog__trigger").on("click",function(e){e.preventDefault,$(this).toggleClass("catalog__trigger_active")});

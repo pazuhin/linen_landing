@@ -1,5 +1,6 @@
 var acco = document.querySelector('.acco');
-var items = acco.getElementsByClassName('acco__item');
+var items = document.getElementsByClassName('acco__item');
+console.log(items);
 var contents = document.getElementsByClassName('acco__block');
 
 acco.addEventListener('click', function(e) {
